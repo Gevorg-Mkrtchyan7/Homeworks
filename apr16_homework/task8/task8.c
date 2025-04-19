@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-void size(value a){
-	printf("Integer = %d, floar = %f, char = %c \n", a.num1, a.num2, a.ch);
-}
-
 int main(){
 	value a;
 	printf("Integer: ");
