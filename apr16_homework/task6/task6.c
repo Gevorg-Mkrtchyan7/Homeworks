@@ -1,33 +1,28 @@
 #include <stdio.h>
-#include <string.h>
+#include "main.h"
 
-typedef struct
-{
-	char brand[30];
-	int price;
-} car;
 
-void func(car info[]){
+void func(car info[], int a){
 	int expenc = info[0].price;
 	int index = 0;
-	for(int i = 1; i < 2; ++i){
+	for(int i = 1; i < a; ++i){
 		if(expenc < info[i].price){
 			expenc = info[i].price;
 			index = i;
 		}
 	}
-	printf("%s", info[index].brand);
-	printf("$%d \n", info[index].price);
+	printf("%s$%d \n", info[index].brand, info[index].price);
 }
 
 int main(){
-	car info[2];
-	for(int i = 0; i < 2; ++i){
+	int a = 2;
+	car info[a];
+	for(int i = 0; i < a; ++i){
 		printf("Car %d: ", i + 1);
 		fgets(info[i].brand, 30, stdin);
 		scanf("%d", &info[i].price);
 		fflush(stdin);
 	}	
-	func(info);
+	func(info, a);
 }
 

@@ -1,11 +1,5 @@
 #include <stdio.h>
-
-typedef union
-{
-	int num1;
-	float num2;
-	char ch;
-} value;
+#include "main.h"
 
 void size(value a){
 	printf("Integer = %d, floar = %f, char = %c \n", a.num1, a.num2, a.ch);

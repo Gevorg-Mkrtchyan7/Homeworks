@@ -1,29 +1,26 @@
 #include <stdio.h>
+#include "main.h"
 
-typedef struct
-{
-	char name[30];
-	int age;
-	float mark;
-} student;
+void tp(student info[], int index){
+	printf("%s, %d, %f \n", info[index].name, info[index].age, info[index].mark);
+}
 
-void func(student info[]){
+void func(student info[], int a){
 	int best = info[0].mark;
 	int index = 0;
-	for(int i = 1; i < 5; ++i){
+	for(int i = 1; i < a; ++i){
 		if(best < info[i].mark){
 			best = info[i].mark;
 			index = i;
 		}
 	}
-	printf("%s,", info[index].name);
-	printf(" %d,", info[index].age);
-	printf(" %f \n", info[index].mark);
+	tp(info, index);
 }
 
 int main(){
-	student info[5];
-	for(int i = 0; i < 5; ++i){
+	int a = 5;
+	student info[a];
+	for(int i = 0; i < a; ++i){
 		printf("Name: ");
 		scanf("%s", info[i].name);
 		printf("Age: ");
@@ -31,5 +28,5 @@ int main(){
 		printf("Mark: ");
 		scanf("%f", &info[i].mark);
 	}	
-	func(info);
+	func(info, a);
 }

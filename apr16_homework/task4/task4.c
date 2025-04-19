@@ -1,11 +1,5 @@
 #include <stdio.h>
-
-typedef enum
-{
-	elect = 1,
-	food = 2,
-	cloth = 3,
-} categories;
+#include "main.h"
 
 typedef struct
 {
@@ -19,9 +13,7 @@ void func(product info[]){
 	for(int i = 0; i < 3; ++i){
 		if(info[i].category == 2){
 			index = i;
-			printf("%s,", info[index].name);
-			printf(" %u,", info[index].category);
-			printf(" $%f \n", info[index].price);
+			printf("%s, %u, $%f \n", info[index].name, info[index].category, info[index].price);
 		}
 	}
 }

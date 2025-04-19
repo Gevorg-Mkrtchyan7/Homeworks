@@ -1,29 +1,21 @@
 #include <stdio.h>
+#include "main.h"
 
-typedef struct
-{
-	char title[50];
-	char author[30];
-	int year;
-} book;
-
-void func(book info[]){
+void func(book info[], int a){
 	int old = info[0].year;
 	int index = 0;
-	for(int i = 1; i < 4; ++i){
+	for(int i = 1; i < a; ++i){
 		if(old > info[i].year){
 			old = info[i].year;
 			index = i;
 		}
 	}
-	printf("%s", info[index].title);
-	printf("%s", info[index].author);
-	printf("%d \n", info[index].year);
+	printf("%s%s%d \n", info[index].title, info[index].author, info[index].year);
 }
-
 int main(){
-	book info[4];
-	for(int i = 0; i < 4; ++i){
+	int a = 4;
+	book info[a];
+	for(int i = 0; i < a; ++i){
 		printf("Title: ");
 		fgets(info[i].title, 50, stdin);
 		printf("Author: ");
@@ -32,6 +24,6 @@ int main(){
 		scanf("%d", &info[i].year);
 		fflush(stdin);
 	}	
-	func(info);
+	func(info, a);
 }
 

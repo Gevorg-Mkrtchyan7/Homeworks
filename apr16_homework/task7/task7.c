@@ -1,10 +1,5 @@
 #include <stdio.h>
-
-typedef union
-{
-	int num1;
-	float num2;
-} value;
+#include "main.h"
 
 void size(value num){
 	printf("Size of union: %lu bytes(minimum size of the largest member) \n", sizeof(value));
