@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int main(){
-	int a = 5;
-	student info[a];
+void in(student info[], int a){
 	for(int i = 0; i < a; ++i){
 		printf("Name: ");
 		scanf("%s", info[i].name);
@@ -12,5 +10,11 @@ int main(){
 		printf("Mark: ");
 		scanf("%f", &info[i].mark);
 	}	
+}
+
+int main(){
+	int a = 5;
+	student info[a];
+	in(info, a);
 	func(info, a);
 }

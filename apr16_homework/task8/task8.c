@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-int main(){
-	value a;
+void in(value a){
 	printf("Integer: ");
 	scanf("%d", &a.num1);
 	size(a);
@@ -11,7 +10,11 @@ int main(){
 	size(a);
 	printf("Char: ");
 	scanf(" %c", &a.ch);
+}
+
+int main(){
+	value a;
+	in(a);	
 	size(a);
 	printf("Size of union: %lu bytes(minimum size of the largest member) \n", sizeof(value));
-
 }	
