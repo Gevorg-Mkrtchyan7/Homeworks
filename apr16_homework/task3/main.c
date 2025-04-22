@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "main.h"
+#include "struct.h"
+
+void func(student info[], int);
 
 void in(student info[], int a){
 	for(int i = 0; i < a; ++i){

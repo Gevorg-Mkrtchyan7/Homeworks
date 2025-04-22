@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "main.h"
+#include "struct.h"
+
+void func(car info[], int);
 
 void in(car info[], int a){
 	for(int i = 0; i < a; ++i){

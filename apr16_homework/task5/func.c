@@ -1,9 +1,5 @@
-typedef struct
-{
-	char title[50];
-	char author[30];
-	int year;
-} book;
+#include <stdio.h>
+#include "struct.h"
 
 void func(book info[], int a){
 	int old = info[0].year;

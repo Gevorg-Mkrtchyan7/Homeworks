@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "main.h"
+#include "struct.h"
+
+void func(product info[], int);
 
 void in(product info[], int a){
 	for(int i = 0; i < a; ++i){

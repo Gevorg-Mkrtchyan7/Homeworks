@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "main.h"
+#include "struct.h"
+
+void func(book info[], int);
 
 void in(book info[], int a){
 	for(int i = 0; i < a; ++i){

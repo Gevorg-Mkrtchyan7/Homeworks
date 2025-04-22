@@ -1,13 +1,6 @@
-typedef struct
-{
-	float mark;
-	int age;
-	char name[30];
-} student;
+#include "struct.h"
 
-void tp(student info[], int index){
-	printf("%s, %d, %f \n", info[index].name, info[index].age, info[index].mark);
-}
+void tp(student info[], int);
 
 void func(student info[], int a){
 	int best = info[0].mark;

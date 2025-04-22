@@ -1,16 +1,5 @@
-typedef enum
-{
-	elect = 1,
-	food = 2,
-	cloth = 3,
-} categories;
-
-typedef struct
-{
-	char name[20];
-	categories category;
-	float price;
-} product;
+#include <stdio.h>
+#include "struct.h"
 
 void func(product info[], int a){
 	int index = 0;

@@ -1,14 +1,6 @@
-typedef struct
-{
-	float price;
-	char brand[20];
-	char model[20];
-	int year;
-} car;
+#include "struct.h"
 
-void tp(car info[], int i){
-	printf("%s, %s, %d, %f \n", info[i].brand, info[i].model, info[i].year, info[i].price);
-}
+void tp(car info[], int);
 
 void func(car info[], int a){
 	int low_price = info[0].price;

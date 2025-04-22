@@ -1,8 +1,5 @@
-typedef struct
-{
-	int price;
-	char brand[30];
-} car;
+#include <stdio.h>
+#include "struct.h"
 
 void func(car info[], int a){
 	int expenc = info[0].price;

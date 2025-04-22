@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "main.h"
+#include "struct.h"
+
+void size(value a);
 
 void in(value a){
 	printf("Integer: ");
