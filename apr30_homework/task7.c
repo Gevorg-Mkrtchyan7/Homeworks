@@ -9,6 +9,10 @@ int main(){
 	printf("Enter a columns: ");
 	scanf("%d", &y);
 	int** matrix = (int**)malloc(x * sizeof(int));
+	if(matrix == NULL){
+		printf("Error \n");
+		return 0;
+	}
 	for(int i = 0; i < x; ++i){
 		matrix[i] = (int*)malloc(y * sizeof(int));
 	}
@@ -25,9 +29,5 @@ int main(){
 		}
 		printf("\n");
 	}	
-	
-	for(int i = 0; i < x; ++i){
-		free(matrix[i]);
-	}
 	free(matrix);
 }

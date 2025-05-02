@@ -2,9 +2,14 @@
 #include <stdlib.h>
 
 int main(){
-	int a = 5;
-	int* p = (int*) malloc(5 * sizeof(int));
-	printf("Enter a 5 numbers \n");
+	int a = 0;
+	scanf("%d", &a);
+	int* p = (int*) malloc(a * sizeof(int));
+	if(p == NULL){
+		printf("Error \n");
+		return 0;
+	}
+	printf("Enter a %d numbers \n", a);
 	for(int i = 0; i < a; ++i){
 		scanf("%d", &p[i]); 
 	}
